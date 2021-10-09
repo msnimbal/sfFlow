@@ -61,6 +61,9 @@ function run() {
                 core.setOutput(OUTPUT_ISMATCH, 'false');
                 return;
             }*/
+            console.log(fromColumn.data.name);
+            console.log('==>');
+            console.log(toColumn.data.name);
             if(fromColumn.data.name == 'TODO' && toColumn.data.name == 'IN PROGRESS'){
                 core.setOutput(OUTPUT_ISMATCH, 'true');
             }
