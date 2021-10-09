@@ -71,7 +71,7 @@ function run() {
             core.setFailed(error.message);
         }
         
-        core.setOutput(OUTPUT_ISMATCH, 'true');
+       
     });
 }
 run();
