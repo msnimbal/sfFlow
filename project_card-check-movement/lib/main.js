@@ -41,7 +41,7 @@ function run() {
                 column_id: fromColumnId
             });
 
-            console.log(`${romColumn.data.name} from column `);
+            console.log(`${fromColumn.data.name} from column `);
 
             /*if (fromColumn.data.name.toUpperCase() !== fromColumnName.toUpperCase()) {
                 console.log(`${fromColumnName.toUpperCase()} doesn't match with ${fromColumn.data.name.toUpperCase}`);
