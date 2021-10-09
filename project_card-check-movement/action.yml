@@ -17,6 +17,8 @@ inputs:
   toColumnName:
     description: 'The name of the column that you were expecting'
     required: true
+outputs:
+  isMatch:
 runs:
   using: 'node12'
   main: 'lib/main.js'
