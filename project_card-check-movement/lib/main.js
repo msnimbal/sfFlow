@@ -1,4 +1,5 @@
 "use strict";
+console.log('am in');
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
@@ -25,7 +26,7 @@ const OUTPUT_ISMATCH = 'isMatch';
 const TOKEN = 'token';
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
-        try {
+        /*try {
             const fromColumnId = core.getInput(INPUT_FROMCOLUMNID);
             const fromColumnName = core.getInput(INPUT_FROMCOLUMNNAME);
             const toColumnId = core.getInput(INPUT_TOCOLUMNID);
@@ -56,7 +57,9 @@ function run() {
         }
         catch (error) {
             core.setFailed(error.message);
-        }
+        }*/
+        
+        core.setOutput(OUTPUT_ISMATCH, 'true');
     });
 }
 run();
