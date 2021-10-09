@@ -1,5 +1,5 @@
 "use strict";
-console.log('am in');
+
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
@@ -26,7 +26,7 @@ const OUTPUT_ISMATCH = 'isMatch';
 const TOKEN = 'token';
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
-        /*try {
+        try {
             const fromColumnId = core.getInput(INPUT_FROMCOLUMNID);
             const fromColumnName = core.getInput(INPUT_FROMCOLUMNNAME);
             const toColumnId = core.getInput(INPUT_TOCOLUMNID);
@@ -40,7 +40,11 @@ function run() {
             const fromColumn = yield octokit.projects.getColumn({
                 column_id: fromColumnId
             });
+            
+            console.log(`${fromColumnName} from column `);
+
             if (fromColumn.data.name.toUpperCase() !== fromColumnName.toUpperCase()) {
+                console.log(`${fromColumnName.toUpperCase()} doesn't match with ${fromColumn.data.name.toUpperCase}`);
                 core.debug(`${fromColumnName.toUpperCase()} doesn't match with ${fromColumn.data.name.toUpperCase}`);
                 core.setOutput(OUTPUT_ISMATCH, 'false');
                 return;
@@ -48,7 +52,11 @@ function run() {
             const toColumn = yield octokit.projects.getColumn({
                 column_id: toColumnId
             });
+
+            console.log(`${toColumn} to column `);
+
             if (toColumn.data.name.toUpperCase() !== toColumnName.toUpperCase()) {
+                console.log(`${toColumnName.toUpperCase()} doesn't 2 match with ${toColumnName.data.name.toUpperCase}`);
                 core.debug(`${toColumnName.toUpperCase()} doesn't match with ${toColumn.data.name.toUpperCase}`);
                 core.setOutput(OUTPUT_ISMATCH, 'false');
                 return;
@@ -56,8 +64,9 @@ function run() {
             core.setOutput(OUTPUT_ISMATCH, 'true');
         }
         catch (error) {
+            console.log(error);
             core.setFailed(error.message);
-        }*/
+        }
         
         core.setOutput(OUTPUT_ISMATCH, 'true');
     });
