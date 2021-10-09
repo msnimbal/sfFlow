@@ -61,7 +61,7 @@ function run() {
                 core.setOutput(OUTPUT_ISMATCH, 'false');
                 return;
             }*/
-            if(fromColumn.data.name == 'TODO' && toColumn,data.name == 'IN PROGRESS'){
+            if(fromColumn.data.name == 'TODO' && toColumn.data.name == 'IN PROGRESS'){
                 core.setOutput(OUTPUT_ISMATCH, 'true');
             }
             else core.setOutput(OUTPUT_ISMATCH, 'false');
