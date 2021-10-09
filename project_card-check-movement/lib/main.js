@@ -40,10 +40,10 @@ function run() {
             const fromColumn = yield octokit.projects.getColumn({
                 column_id: fromColumnId
             });
-            
+
             console.log(`${fromColumnName} from column `);
 
-            if (fromColumn.data.name.toUpperCase() !== fromColumnName.toUpperCase()) {
+            /*if (fromColumn.data.name.toUpperCase() !== fromColumnName.toUpperCase()) {
                 console.log(`${fromColumnName.toUpperCase()} doesn't match with ${fromColumn.data.name.toUpperCase}`);
                 core.debug(`${fromColumnName.toUpperCase()} doesn't match with ${fromColumn.data.name.toUpperCase}`);
                 core.setOutput(OUTPUT_ISMATCH, 'false');
@@ -60,8 +60,11 @@ function run() {
                 core.debug(`${toColumnName.toUpperCase()} doesn't match with ${toColumn.data.name.toUpperCase}`);
                 core.setOutput(OUTPUT_ISMATCH, 'false');
                 return;
+            }*/
+            if(fromColumnName.toUpperCase() == 'TODO' && toColumnName.toUpperCase() == 'IN PROGRESS'){
+                core.setOutput(OUTPUT_ISMATCH, 'true');
             }
-            core.setOutput(OUTPUT_ISMATCH, 'true');
+            else core.setOutput(OUTPUT_ISMATCH, 'false');
         }
         catch (error) {
             console.log(error);
